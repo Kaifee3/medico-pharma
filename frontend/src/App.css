@@ -1,0 +1,123 @@
+/* ===== Navbar Styling ===== */
+.main-navbar {
+  background: linear-gradient(135deg, #007f4f, #00b37e); /* smooth green gradient */
+  padding: 0.6rem 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25); /* softer shadow for depth */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.main-navbar:hover {
+  background: linear-gradient(135deg, #009966, #00cc88); /* subtle hover gradient */
+}
+
+.navbar-brand img {
+  width: 60px;
+  height: auto;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.navbar-brand img:hover {
+  transform: scale(1.15) rotate(-5deg);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.nav-link {
+  color: #ffffff !important;
+  font-weight: 600;
+  margin: 0 10px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  display: block;
+  width: 0%;
+  height: 2px;
+  background: #ffe082;
+  transition: width 0.3s;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.nav-link:hover {
+  color: #ffe082 !important;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.user-icon {
+  color: #fff;
+  font-size: 20px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.user-icon:hover {
+  color: #ffe082;
+  transform: scale(1.2);
+}
+
+.navbar .badge {
+  font-size: 0.8rem;
+  margin-left: 5px;
+  background: #ff4d4d;
+  color: #fff;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.navbar .badge:hover {
+  transform: scale(1.2);
+  background: #ff3333;
+}
+
+
+
+/* ===== Dropdown Menu ===== */
+.user-dropdown .dropdown-menu {
+  background: #006644;
+  border-radius: 10px;
+  padding: 0.5rem 0;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+.user-dropdown .dropdown-item {
+  color: #e0e0e0 !important;
+  font-weight: 500;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.user-dropdown .dropdown-item:hover {
+  background: #00b37e;
+  color: #fff !important;
+  transform: scale(1.05);
+}
+
+.signout-link {
+  color: #ff4d4d !important;
+  font-weight: bold;
+}
+
+.signout-link:hover {
+  color: #ff1a1a !important;
+  transform: scale(1.05);
+}
+
+/* ===== Responsive Navbar ===== */
+@media (max-width: 768px) {
+  .main-navbar {
+    padding: 0.5rem;
+  }
+
+  .nav-link {
+    margin: 0 5px;
+  }
+}
